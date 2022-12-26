@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard/index';
 import Sidebar from './Components/Sidebar'
 import Topbar from './Components/Topbar'
 import Vehicles from './Pages/Vehicle'
+import { VehicleCreate } from './Pages/Vehicle/VehicleCreate';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -24,6 +25,7 @@ function App() {
                   <Routes>
                       <Route path="/" element={<Dashboard/>} />
                       <Route path='/vehicles' element={<Vehicles/>}/>
+                      <Route path='/vehicles/create' element={<VehicleCreate/>} />
                   </Routes>
 
             </main>
