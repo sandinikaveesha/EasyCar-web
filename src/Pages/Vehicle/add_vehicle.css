@@ -1,0 +1,46 @@
+
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    opacity: 70%;
+}
+.sub-title{
+    font-size: 14px;
+    font-weight: 500;
+}
+.map-box{
+    margin: 5rem;
+}
+.right-side{
+    zoom: 87%;
+}
+.card-img{
+   margin-top: 1rem;
+}
+.widget-container{
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+.widget-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    opacity: 70%;
+
+}
+.table-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1rem;
+    
+    opacity: 70%;
+}
+.card-title{
+    color: white;
+    font-weight: 600;
+}
+.card-info{
+    color: white;
+    font-weight: bold;
+}

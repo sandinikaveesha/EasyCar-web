@@ -13,7 +13,7 @@ const Item = ({  title, to, icon, selected, setSelected }) => {
 
     return (
         <MenuItem active={selected === title } style={{ color: colors.grey[100] }} onClick={()=> setSelected(title)} icon={icon}>
-            <Typography>{title}</Typography>
+            <Typography sx={{ fontSize: '14px' }}>{title}</Typography>
             <Link to={to}/>
         </MenuItem>
     )
@@ -50,7 +50,7 @@ const Sidebar = ({state})=>{
              }}
              style={{ 
                 height: '100vh',
-                width: '270px'
+                width: '270px',
               }}
         >
             <ProSidebar collapsed={isCollapsed}>
@@ -76,7 +76,7 @@ const Sidebar = ({state})=>{
                                     color= {colors.grey[100]}
                                     fontSize= {18}
                                     >
-                                        Sample Name
+                                        Easy Car Portal
                                 </Typography>
                                 <IconButton onClick={()=>setIsCollapsed(!isCollapsed)}>
                                     <MenuOutlined/>
@@ -114,15 +114,19 @@ const Sidebar = ({state})=>{
                             icon = {<HomeOutlined/>}
                             selected = {selected}
                             setSelected = {setSelected}
+                            
                         />
-                        <Typography
-                            color = {colors.grey[300]}
-                            sx={{ 
-                                m: '15px 0 5px 20px'
-                             }}
-                        >
+                        {!isCollapsed && (
+                            <Typography
+                                color = {colors.grey[300]}
+                                sx={{ 
+                                    m: '15px 0 5px 20px'
+                                }}
+                            >
                             Activities
-                        </Typography>
+                            </Typography>
+                        )}
+                        
                         <Item
                             title= 'Vehicle Management'
                             to = '/vehicles'

@@ -6,10 +6,15 @@ import { Box } from '@mui/material'
 
 const Dashboard = ()=>{
     return (
+       <>
+        <Sidebar/>
+        <main className='content'>
+        <Topbar/>
         <Box m='20px'>
-            {/*Header*/}
             <Header title='Dashboard' subtitle='Welcome to your dashboard'/>
         </Box>
+        </main> 
+       </>
     )
 }
 

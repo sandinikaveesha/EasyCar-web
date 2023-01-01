@@ -1,34 +1,28 @@
 import { Routes, Route } from 'react-router-dom'
 import { ColorModeContext, useMode} from './theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
-import { useState } from 'react'
 
-//import LoginPage from './Pages/LoginPage';
 import Dashboard from './Pages/Dashboard/index';
-import Sidebar from './Components/Sidebar'
-import Topbar from './Components/Topbar'
-import Vehicles from './Pages/Vehicle'
-import { VehicleCreate } from './Pages/Vehicle/VehicleCreate';
+import BusinessRegistration from './Pages/Business/BusinessRegistration';
+import UserRegistration from './Pages/User/UserRegistration';
+import AddVehicle from './Pages/Vehicle/AddVehicle';
+
 
 function App() {
   const [theme, colorMode] = useMode();
-  const [isSidebar, setIsSidebar] = useState(true);
+
 
   return (
   <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <div className="app">
-        <Sidebar/>
-            <main className="content">
-                <Topbar/>
+        <div className="app"> 
                   <Routes>
                       <Route path="/" element={<Dashboard/>} />
-                      <Route path='/vehicles' element={<Vehicles/>}/>
-                      <Route path='/vehicles/create' element={<VehicleCreate/>} />
+                      <Route path="/register" element={<BusinessRegistration/>}/>
+                      <Route path='/user/register' element={<UserRegistration/>}/>
+                      <Route path='/vehicles' element={<AddVehicle/>}/>
                   </Routes>
-
-            </main>
         </div>
       </ThemeProvider>   
   </ColorModeContext.Provider>
